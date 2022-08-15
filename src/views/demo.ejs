@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>hCaptcha Demo</title>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+  </head>
+  <body>
+    <form action="/receiveMessage" method="POST">
+      <input required type="text" name="message" placeholder="message" />
+      <div class="h-captcha" data-sitekey="c103610d-410f-4eac-8abd-27f879598ccf"></div>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
