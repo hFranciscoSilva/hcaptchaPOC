@@ -10,7 +10,7 @@ class UserController{
         const comment : {message} = request.body
         console.log()
 
-        const secret = ''
+        const secret = '0x0000000000000000000000000000000000000000'
         const token = comment['h-captcha-response']
 
         const theDate = new Date()
@@ -29,12 +29,14 @@ class UserController{
             if(data.success == true){
                 fs.appendFile('message.log', `Tentativa funcionou -  ${formattedDate}\n`, function (err) {
                     if (err) throw err;
-                    console.log('Saved!');
+                    console.log('Tentativa funcionou -Saved!');
+                    console.log(data)
                   });
             }else{
                 fs.appendFile('error.log', `Tentativa não funcionou -  ${formattedDate}\n`, function (err) {
                     if (err) throw err;
-                    console.log('Saved!');
+                    console.log('Tentativa não funcionou - Saved!');
+                    console.log(data)
                   });
             }
         })
